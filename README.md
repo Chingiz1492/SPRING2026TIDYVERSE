@@ -16,7 +16,11 @@ Each vignette is a standalone `.Rmd` file — open it in RStudio, make sure you 
 | Author | Vignette | Package(s) | What It Covers | Dataset |
 |---|---|---|---|---|
 | Mark H. | [Student Mental Health & Burnout](student_mental_health_ggplot2.Rmd) | ggplot2 | geom_histogram, geom_boxplot, geom_point, geom_smooth, geom_bar, facet_wrap | [Kaggle](https://www.kaggle.com/datasets/sharmajicoder/student-mental-health-and-burnout) |
+
 | Zihao Yu | [zihao_iris_vignette.Rmd](zihao_iris_vignette.Rmd) | dplyr, ggplot2 | pivot_longer, grouped summaries, boxplots, scatter plot|  [Kaggle](https://www.kaggle.com/datasets/uciml/iris?resource=download) |
+
+=======
+| Brandon C. | [Exploring IMDb Ratings by Genre](exploring_imbd_ratings_by_genre_with_tidyverse.qmd) | tidyverse (dplyr, tidyr, ggplot2, readr) | separate_rows, group_by, summarise, filter, geom_col | [Kaggle](https://www.kaggle.com/datasets/harshitshankhdhar/imdb-dataset-of-top-1000-movies-and-tv-shows?resource=download) |
 
 
 ---
@@ -49,6 +53,19 @@ Revision/Addition Description and Link:
 
 # Brandon C
 Initial Description and Link:
+
+### Vignette Description:
+The vignette submitted is titled exploring_imdb_ratings_by_genre_with_tidyverse.qmd. It demonstrates how several TidyVerse packages may be used together to import, tidy, transform, summarize, and visualize a real world dataset in R.
+
+### Dataset Description and Link:
+The dataset used is the IMDb Dataset of Top 1000 Movies and TV Shows, sourced from Kaggle. It includes variables such as title, genre, IMDb rating, runtime, and gross earnings.  
+Link: https://www.kaggle.com/datasets/harshitshankhdhar/imdb-dataset-of-top-1000-movies-and-tv-shows?resource=download
+
+### TidyVerse Functions Used:
+This vignette draws upon functions from readr, dplyr, tidyr, and ggplot2, including read_csv(), select(), separate_rows(), group_by(), summarise(), filter(), and ggplot() with geom_col().
+
+### Summary of Analysis:
+A central focus of the vignette was the genre field, since multiple genres were often stored within a single observation and were therefore not immediately in a tidy format for grouped analysis. Using separate_rows(), the field was restructured into a more analysis-ready form, after which the data was grouped and summarized in order to compare average IMDb ratings across genres, with the results being visualized in a bar chart.
 
 Revision/Addition Description and Link:
 
@@ -211,8 +228,17 @@ Revision/Addition Description and Link:
 
 # Meiqi N
 Initial Description and Link:
+**Title:** Analyzing Medical Insurance Costs based on smoking 
+**Author:** Mei Qi Ng
+**Dataset:** [Medical Insurance Cost Dataset (Kaggle)](https://www.kaggle.com/datasets/mosapabdelghany/medical-insurance-cost-dataset)
+**TidyVerse Packages & Functions Used:** 
+  *`readr`: `read_csv()`
+  * `dplyr`: `mutate()`, `case_when()`, `group_by()`, `summarise()`, `arrange()`
+  * `ggplot2`: `ggplot()`, `geom_point()`, `scale_color_manual()`
 
-Revision/Addition Description and Link:
+**Description:** 
+This vignette demonstrates how to import raw healthcare data and engineer new categorical features (BMI) to analyze cost drivers. Using dplyr to manipulate the data and then with ggplot2 to generate a scatter plot, we can visualize the compounding financial penalty of smoking and higher body mass index.
+**Link to Vignette:** [Medical_Costs_Vignette.Rmd](Medical_Costs_Vignette.Rmd) 
 
 # Michael M
 Initial Description and Link:
@@ -324,3 +350,6 @@ Initial Description and Link:
 
 Revision/Addition Description and Link:
 main
+
+#Samanthabarbaro
+Initial Description and Link: stringr demo, https://github.com/acatlin/SPRING2026TIDYVERSE/pull/11/changes/f0e79af7598a1bcb2ee17b27ca286814918d8bfa
