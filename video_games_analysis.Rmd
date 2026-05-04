@@ -72,3 +72,34 @@ This vignette demonstrates how to use Tidyverse tools such as dplyr and ggplot2 
 
 ###Dataset:
 Video game sales dataset including global and regional sales.
+
+# --- EXTENSION BY CHINGIZ RABDANOV ---
+# This section adds a practical analysis of market share by genre.
+# It helps identify which game genres have the highest sales impact.
+
+library(dplyr)
+library(ggplot2)
+
+# 1. Prepare the data: Filter out missing genres and calculate total sales
+genre_sales <- df %>%
+  filter(!is.na(Genre)) %>%
+  group_by(Genre) %>%
+  summarise(
+    Total_Global_Sales = sum(Global_Sales, na.rm = TRUE),
+    Average_Sales = mean(Global_Sales, na.rm = TRUE),
+    Game_Count = n()
+  ) %>%
+  arrange(desc(Total_Global_Sales))
+
+# 2. Visualize the Top 10 Genres by Total Sales
+# This is crucial for business decisions in game development.
+ggplot(head(genre_sales, 10), aes(x = reorder(Genre, Total_Global_Sales), y = Total_Global_Sales)) +
+  geom_col(fill = "steelblue") +
+  coord_flip() + # Makes labels easier to read
+  theme_minimal() +
+  labs(
+    title = "Top 10 Video Game Genres by Global Sales",
+    subtitle = "Data-driven insight into market dominance",
+    x = "Genre",
+    y = "Total Sales (Millions)"
+  )
