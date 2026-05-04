@@ -367,3 +367,6 @@ main
 
 #Samanthabarbaro
 Initial Description and Link: stringr demo, https://github.com/acatlin/SPRING2026TIDYVERSE/pull/11/changes/f0e79af7598a1bcb2ee17b27ca286814918d8bfa
+
+#CHINGIZ RANDANOV
+* Extended video_games_analysis.Rmd by adding a business-focused analysis of global sales by genre.
